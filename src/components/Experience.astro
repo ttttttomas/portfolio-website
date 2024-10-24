@@ -1,0 +1,28 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro'
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...',
+        title: 'Desarrollador Web Full Stack freelancer.',
+        description: 'Trabajando de forma autonoma desarrollando webs con diferentes lenguajes y/o plataformas para empresas, emprendimientos, etc. ',
+        link: '#',
+    },
+    {
+        date: 'Nov 2022 - Feb 2024',
+        title: 'Carlos Martinez Construcciones S.R.L',
+        description: 'Coordinador de proyectos y tareas administrativas como computos y presupuestos, facturación, Gmail, coordinación de tareas, herramientas de gestión, manejo de pagina web de la empresa.',
+        link: '#'
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+    EXPERIENCE.map(experience =>(
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience} />
+        </li>
+    ))
+    }                  
+</ol>
+
