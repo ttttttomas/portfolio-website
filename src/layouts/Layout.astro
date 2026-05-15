@@ -1,60 +1,67 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-gradient-to-r from-slate-900 to-slate-700">
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/jpg" href="/photo.jpg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="relative text-white/90">
+    <div
+      class="fixed top-0 z-[-2] h-screen w-screen bg-[#0a0a0a] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: light dark;
-	}
+  :root {
+    color-scheme: dark;
+  }
 
-	html {
-		font-family: 'Onest Variable', system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
-	body {
-		background-color: #222;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	@media (prefers-reduced-motion){
-		html{
-		scroll-behavior: auto;
-		}
-	}
-	#header {
-        animation: blur linear auto 0.5s;
-        animation-timeline: scroll();
-      }
-	  @keyframes blur {
-        to {
-          backdrop-filter: blur(50px);
-          background-color: rgb(100 116 139);
-          border-radius: 9999px;
-        }
-      }
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Outfit", sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 </style>

@@ -1,10 +1,57 @@
-<header class="flex fixed top-0 justify-center items-center py-5 w-full mx-auto ">
-
-<nav id="header" class="flex flex-row gap-x-3 text-sm px-3 py-2 rounded-full ">
-    <a class="hover:text-blue-400 transition" href="/">Inicio</a>
-    <a class="hover:text-blue-400 transition" href="#experiencia">Experiencia</a>
-    <a class="hover:text-blue-400 transition" href="#proyectos">Proyectos</a>
-    <a class="hover:text-blue-400 transition" href="#sobre-mi">Sobre mí</a>
-    <a class="hover:text-blue-400 transition" href="#contacto">Contacto</a>
-</nav>
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mt-2 px-2"
+>
+  <nav
+    class="flex px-2 md:px-3 text-sm font-medium rounded-full text-gray-200 justify-center items-center bg-black/20 backdrop-blur-md border border-white/10"
+  >
+    <a
+      class="relative block px-1.5 py-2 transition hover:text-blue-500 md:px-3"
+      aria-label="inicio"
+      href="/#top"
+    >
+      Inicio
+    </a>
+    <a
+      class="relative block px-1.5 py-2 transition hover:text-blue-500 md:px-3"
+      aria-label="experiencia"
+      href="/#experiencia"
+    >
+      Experiencia
+    </a>
+    <a
+      class="relative block px-1.5 py-2 transition hover:text-blue-500 md:px-3"
+      aria-label="tecnologias"
+      href="/#tecnologias"
+    >
+      Tecnologías
+    </a>
+    <a
+      class="relative block px-1.5 py-2 transition hover:text-blue-500 md:px-3"
+      aria-label="proyectos"
+      href="/#proyectos"
+    >
+      Proyectos
+    </a>
+    <a
+      class="relative block px-1.5 py-2 transition hover:text-blue-500 md:px-3"
+      aria-label="contacto"
+      href="mailto:totobarajas124@gmail.com"
+    >
+      Contacto
+    </a>
+  </nav>
 </header>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-white/50 dark:bg-gray-800/90 ring-white/10;
+    }
+  }
+</style>

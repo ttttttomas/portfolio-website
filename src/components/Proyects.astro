@@ -1,36 +1,287 @@
 ---
-const PROYECTS = [
-    {
-        title: "CAJAS1970 - Fabrica de cajas." ,
-        description: "Fabrica de cajas de microcorrugado y cartulina, venta mayorista y minorista.",
-        link: "#",
-        github:"https://github.com/ttttttomas/Cajas1970-proyect",
-        image: "/public/cajas1970.webp",
-        tags: ['HTML, CSS, JAVASCRIPT']
-    },
-    {
-        title: "Prototipo de la tienda amarilla." ,
-        description: "Fabrica de cajas de microcorrugado y cartulina, venta mayorista y minorista.",
-        link: "#",
-        github:"https://github.com/ttttttomas/Cajas1970-proyect",
-        image: "/public/meli-app.png",
-        tags: ['NEXTJS, TAILWINDCSS, HMTL, CSS, JAVASCRIPT']
-    },
-]
+import GitHub from "./icons/Github.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import React from "./icons/React.astro";
+import NodeJS from "./icons/NodeJS.astro";
+import Python from "./icons/Python.astro";
+import MySQL from "./icons/MYSQL.astro";
+import FastAPI from "./icons/Fastapi.astro";
+import CPP from "./icons/CPP.astro";
+import Express from "./icons/Express.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Git from "./icons/Git.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import HTML from "./icons/HTML.astro";
+import Socket from "./icons/Websocket.astro";
+import MercadoPago from "./icons/MercadoPago.astro";
+
+const TAGS = {
+  WEBSOCKET: {
+    name: "WebSocket",
+    class: "bg-white text-black",
+    icon: Socket,
+  },
+  MP: {
+    name: "Mercado Pago",
+    class: "bg-white text-black",
+    icon: MercadoPago,
+  },
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#f7df1e] text-black",
+    icon: JavaScript,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178c6] text-white",
+    icon: TypeScript,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#23272f] text-[#58c4dc]",
+    icon: React,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#339933] text-white",
+    icon: NodeJS,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#3776ab] text-white",
+    icon: Python,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758f] text-white",
+    icon: MySQL,
+  },
+  FASTAPI: {
+    name: "FastAPI",
+    class: "bg-white text-black",
+    icon: FastAPI,
+  },
+  CPP: {
+    name: "C++",
+    class: "bg-[#00599c] text-white",
+    icon: CPP,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black text-white",
+    icon: Express,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#ff5d01] text-white",
+    icon: AstroIcon,
+  },
+  GIT: {
+    name: "Git",
+    class: "bg-[#f05032] text-white",
+    icon: Git,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#e34f26] text-white",
+    icon: HTML,
+  },
+};
+const PROJECTS = [
+  {
+    title:
+      "Burgerli - Tienda Online y Sistema de gestion empresarial para hamburgueseria artesanal.",
+    description:
+      "En lo personal, el mejor proyecto hasta la fecha. Es una proyecto que demuestra todo mi conocimiento en desarrollo web y bases de datos. Cuenta con sistema de carrito, seguimiento de envios en tiempo real, pasarela de pagos, sistema de tickets, gestion de inventario, gestion de usuarios, gestion de pedidos, analiticas para administradores, etc.",
+    link: "https://burgerli.com.ar",
+    github: "https://github.com/ttttttomas/burgerli-website",
+    image: "/burgerli.png",
+    tags: [
+      TAGS.WEBSOCKET,
+      TAGS.MP,
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "ZonaQuintas - Plataforma de alquiler de quintas.",
+    description:
+      "ZonaQuintas es un marketplace de reservas de quintas y espacios para eventos en Argentina al estilo AirBNB. Desarrollé la plataforma completa desde cero, incluyendo sistema de autenticación, gestión de propiedades, flujo de reservas con estados, membresias premium y pasarela de pagos con Rebill (seña + saldo), webhooks de confirmación automática y paneles de administración, reservas, publicaciones, etc.",
+    link: "https://zonaquintas.com",
+    github: "https://github.com/ttttttomas/zonaquintas-website",
+    image: "/zonaquintas.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title:
+      "Tranett SAAS - Sistema de gestion para empresas del rubro turistico.",
+    description:
+      "De mis proyectos mas innovadores. Tranett es una plataforma SaaS diseñada para optimizar la gestión de empresas del rubro turístico. El sistema centraliza operaciones clave como reservas, administracion, usuarios y permisos dentro del sistema, paquetes de viaje, gestion de contenido de la web de la empresa, etc.",
+    link: "https://tranett.com.ar",
+    github: "https://github.com/iWeb-Company/travelnett-saas",
+    image: "/tranett.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "Salud Vitalis - Centro de salud integral.",
+    description:
+      "Vitalis es un centro de salud integral con enfoque en bienestar y atención personalizada. El sitio web fue desarrollado desde cero con tecnologías modernas para una experiencia de usuario fluida. Cuenta con sistema de gestion (mediante autenticacion de usuarios) de turnos, profesionales, especialidades, historiales clinicos, etc.",
+    link: "https://saludvitalis.org",
+    github: "https://github.com/ttttttomas/vitalis-website",
+    image: "/vitalis.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "Automotores Yrigoyen - Agencia de autos.",
+    description:
+      "Automotores Yrigoyen es una agencia de autos con años de experiencia en el mercado. Cuenta con su propio sistema de gestión para la administración de productos.",
+    link: "https://automotoresyrigoyen.com",
+    github: "https://github.com/ttttttomas/automororesirigoyen-website",
+    image: "/automotores.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "Estudio VArq - Arquitectura.",
+    description:
+      "Estudio VArq es un estudio de arquitectura con años dentro del rubro de la construcción. Cuenta con un formulario moderno paso a paso para la generación digital de tu casa ideal con una finalización de conctacto dando cantidades de m2, ambientes, etc. Se supo añadir una automatización via N8N para el contacto dentro de Whatsapp.",
+    link: "https://estudiovarq.com.ar/",
+    github: "https://github.com/ttttttomas/estudiovarq-website",
+    image: "/estudiovarq.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "Estelar Viajes - Agencia de turismo.",
+    description:
+      "Agencia de viajes con paquetes turísticos por Argentina y el exterior. Desarrollé un sistema de gestión para la administración de los productos, clientes, reservas, etc.",
+    link: "https://estelarturismo.com.ar",
+    github: "https://github.com/ttttttomas/estelar-viajes-website",
+    image: "/estelar.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.FASTAPI,
+      TAGS.MYSQL,
+    ],
+  },
+  {
+    title: "CAJAS1970 - Fabrica de cajas.",
+    description:
+      "Mi primer proyecto real, Cajas1970 es una fabrica de cajas de microcorrugado y cartulina, venta mayorista y minorista. Desarrollado con tecnologías modernas para una experiencia de usuario fluida.",
+    link: "https://cajas1970.com",
+    github: "https://github.com/ttttttomas/Cajas1970-proyect",
+    image: "/cajas1970.png",
+    tags: [TAGS.HTML, TAGS.JAVASCRIPT],
+  },
+];
 ---
 
-{
-  PROYECTS.map(({title, image, description, tags}) =>(
-    <article class="rounded-3xl mb-10">
-        <h3 class="text-2xl font-semibold text-blue-300">{title}</h3>
-        <p class="text-lg mb-4 text-pretty" >{description}</p>
-        <ul class="mb-5">
-            {
-            tags.map(tag =>(
-                <li>{tag}</li>
-            ))}
-        </ul>
-        <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
-    </article>
-  ))
-}
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={`Captura de pantalla del proyecto ${title}`}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-100"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row flex-wrap gap-2 mb-2 ">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex items-center w-max gap-2 rounded-full text-xs ${tag.class} p-2`}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

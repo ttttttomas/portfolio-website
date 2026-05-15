@@ -1,86 +1,89 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import Experience from '../components/Experience.astro';
-import SocialPill from '../components/SocialPill.astro';
-import Proyects from '../components/Proyects.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Experience from "../components/Experience.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Proyects from "../components/Proyects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 
-import BriefCase from '../components/icons/BriefCase.astro';
-import Code from '../components/icons/Code.astro';
-import GitHub from '../components/icons/Github.astro';
-import Instagram from '../components/icons/Instagram.astro';
-import Linkedin from '../components/icons/Linkedin.astro';
-import Mail from '../components/icons/Mail.astro';
-
+import BriefCase from "../components/icons/BriefCase.astro";
+import Code from "../components/icons/Code.astro";
+import GitHub from "../components/icons/Github.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Mail from "../components/icons/Mail.astro";
+import Tecnologies from "../components/Tecnologies.astro";
 ---
 
-<Layout title="Portfolio TotoDev - Desarrollador y Programador Web."
-description="Contactame para crear tu aplicacion web. Desarrollador web especializado en desarrollo de aplicaciones webs únicas y dinamicas.">
-<main class="px-4">
-	<section class="w-full lg:w-[740px] mx-auto py-44">
-		<img 
-		src="/public/photo.webp"
-		class="rounded-full size-16 md:size-24"
-		 alt="photo">
-		<h1 class="text-white text-2xl 
-		lg:text-5xl 
-		font-bold 
-		flex 
-		flex-row 
-		gap-x-4
-		pb-6 
-		lg:pb-10">
-			Hola, soy Tomás.
-			<a href="https://iwebtecnology.com" target="_blank" class="flex justify-center items-center">
-				<Badge>Disponible para trabajar</Badge>
-			</a>
-		</h1>
-		<h2 class="text-xl lg:text-2xl text-wrap max-x-[700px] opacity-80">
-			Desarrollador Web en <span class="text-blue-300">Buenos Aires, Argentina.</span>
-			Me especializo en el desarrollo de <span class="text-blue-300">aplicaciones webs únicas y dinamicas.</span>
-		</h2>
-		<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/tomas-barajas-935b39295">
-					<Linkedin 
-					class="size-5 lg:size-6"
-					 />
-					LinkedIn
-				</SocialPill>
-				<SocialPill href="https://www.instagram.com/iwebtecnology/">
-					<Instagram
-					class="size-5 lg:size-6"
-					 />
-					Instagram
-				</SocialPill>
-				<SocialPill href="https://github.com/ttttttomas">
-					<GitHub
-					class="size-5 lg:size-6"
-					 />
-					GitHub
-				</SocialPill>
-				<SocialPill href="mailto:totobarajas124@gmail.com">
-					<Mail
-					class="size-5 lg:size-6"
-					 />
-					Contactame!
-				</SocialPill>
-		</nav>
-	</section>
-	
-	<section id="experiencia"  class="w-full lg:w-[740px] mx-auto py-22">
-		<h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center">
-			<BriefCase class="size-8"/>
-			Experiencia Laboral
-		</h2>
-		<Experience />
-	</section>
+<Layout
+  title="Portfolio Toto - Desarrollador y Programador Web."
+  description="Contactame para crear tu aplicacion web. Desarrollador web especializado en desarrollo de aplicaciones webs únicas y dinamicas.">
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-44 pb-32">
+      <img
+        src="/photo.jpg"
+        class="rounded-full size-16 md:size-24 mb-4 object-cover"
+        alt="photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hola, soy Tomás.
+        <a
+          href="https://iwebtecnology.com"
+          target="_blank"
+          class="flex justify-center items-center hover:scale-105 transition">
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] text-gray-300">
+        <span>+2 años de experiencia.</span>
+        <span class="text-blue-300">Desarrollador de Software</span>
+        <span>de Buenos Aires, Argentina.</span>
+        <span class="opacity-75"
+          >Especializado en crear aplicaciones únicas y dinámicas.</span
+        >
+      </h2>
+      <nav class="flex gap-2 md:gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/tomas-barajas-935b39295">
+          <Linkedin class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/ttttttomas">
+          <GitHub class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:totobarajas124@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          Contactame!
+        </SocialPill>
+      </nav>
+    </SectionContainer>
 
-	<section id="proyectos"  class="w-full lg:w-[740px] mx-auto py-28">
-		<h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center">
-			<Code class="size-2"/>
-			Proyectos
-		</h2>
-		<Proyects />
-	</section>
-</main>
+    <SectionContainer id="experiencia" class="py-12 md:py-24">
+      <h2
+        class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80">
+        <BriefCase class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="tecnologias" class="py-12 md:py-24">
+      <h2
+        class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80">
+        <Code class="size-7" />
+        Tecnologías
+      </h2>
+      <Tecnologies />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="py-12 md:py-24">
+      <h2
+        class="text-2xl md:text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Proyects />
+    </SectionContainer>
+  </main>
 </Layout>
